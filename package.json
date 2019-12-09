@@ -19,7 +19,8 @@
     "url": "https://github.com/n0sfer666/FSD-Task-4/issues"
   },
   "homepage": "https://github.com/n0sfer666/FSD-Task-4#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@types/jquery": "^3.3.31",
     "jquery": "^3.4.1",
     "ts-loader": "^6.2.1",
