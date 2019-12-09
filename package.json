@@ -1,0 +1,18 @@
+{
+  "name": "simplerangeslider",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0sfer666/FSD-Task-4.git"
+  },
+  "keywords": ["range", "slider", "rangeslider"],
+  "author": "Khasanov Petr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0sfer666/FSD-Task-4/issues"
+  },
+  "homepage": "https://github.com/n0sfer666/FSD-Task-4#readme"
+}
