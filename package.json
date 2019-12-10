@@ -7,7 +7,9 @@
   "scripts": {
     "test": "karma start",
     "css": "postcss ./Style/style.css -o ./dist/style.css --watch",
-    "css:prod": "postcss ./Style/style.css -o ./dist/style.min.css --env production"
+    "css:prod": "postcss ./Style/style.css -o ./dist/style.min.css --env production",
+    "plugin": "webpack --mode development --watch",
+    "plugin:prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
