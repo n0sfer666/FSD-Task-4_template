@@ -1,4 +1,4 @@
-const mode = process.env.WEBPACK_MODE
+const mode = process.env.WEBPACK_MODE;
 module.exports = {
     entry: {
         SimpleRangeSlider: './src/Plugin.ts',

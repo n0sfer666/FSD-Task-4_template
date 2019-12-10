@@ -1,8 +1,13 @@
 {
   "name": "simplerangeslider",
   "version": "1.0.0",
+  "browserslist": [
+    "last 3 version"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start",
+    "css": "postcss ./Style/style.css -o ./dist/style.css --watch",
+    "css:prod": "postcss ./Style/style.css -o ./dist/style.min.css --env production"
   },
   "repository": {
     "type": "git",
