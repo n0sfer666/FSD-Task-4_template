@@ -2,7 +2,7 @@
 
 class SimpleRangeSlider {
     container: HTMLElement;
-    configuration: object;
+    configuration: IConfiguration;
 
     constructor(container: HTMLElement, configuration: IConfiguration) {
         this.container = container;
@@ -14,7 +14,7 @@ class SimpleRangeSlider {
 
 ;(function($: JQueryStatic) {
     $.fn.extend({
-        SimpleRangeSlider: function(configuration: object) {
+        SimpleRangeSlider: function(configuration: IConfiguration) {
             return new SimpleRangeSlider(<HTMLElement>this, <IConfiguration>configuration);
         }
     });
