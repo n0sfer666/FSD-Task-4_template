@@ -1,9 +1,9 @@
 interface IConfiguration {
-    orientation: TConfigurationOrientation;
-    start: number[];
-    step: number;
-    connect: boolean;
-    tooltip: boolean;
+    readonly orientation: TConfigurationOrientation; 
+    readonly start: number[];
+    readonly step: number;
+    readonly connect: boolean;
+    readonly tooltip: boolean;
 }
 
 type TConfigurationOrientation = 'horizontal' | 'vertical';

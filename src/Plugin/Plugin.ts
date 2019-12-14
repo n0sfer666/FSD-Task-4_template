@@ -1,5 +1,3 @@
-'use strict'
-
 class SimpleRangeSlider {
     container: HTMLElement;
     configuration: IConfiguration;
