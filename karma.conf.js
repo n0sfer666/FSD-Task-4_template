@@ -29,8 +29,8 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['./Test/**/*.ts', 
-                './Test/**/*.js'
+        files: ['./src/Test/**/*.ts', 
+                // './src/Test/**/*.js'
         ],
 
         // list of files / patterns to exclude
@@ -39,8 +39,8 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            './Test/**/*.ts': ['webpack'],
-            './Test/**/*.js': ['webpack'],
+            './src/Test/**/*.ts': ['webpack'],
+            // './src/Test/**/*.js': ['webpack'],
         },
         webpack: {
             module: webpackConfig.module,

@@ -7,7 +7,6 @@ class SimpleRangeSlider {
     constructor(container: HTMLElement, configuration: IConfiguration) {
         this.container = container;
         this.configuration = configuration;
-
     }
 
 }
