@@ -1,10 +1,13 @@
 class SimpleRangeSlider {
-    container: HTMLElement;
-    configuration: IConfiguration;
-
-    constructor(container: HTMLElement, configuration: IConfiguration) {
-        this.container = container;
-        this.configuration = configuration;
+    constructor(public container: HTMLElement, private configuration: IConfiguration) {
+        let defaultCOnfiguration: IConfiguration = {
+            orientation: 'horizontal',
+            start: [10],
+            range: [0, 100],
+            step: 1,
+            connect: true,
+            tooltip: false
+        }
     }
 
 }
