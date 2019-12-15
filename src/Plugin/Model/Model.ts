@@ -1,5 +1,4 @@
 export class Model {
-    constructor(configuration: IModelConfiguration) {
-        console.log(configuration);
+    constructor(private configuration: IModelConfiguration) {
     }
 }
