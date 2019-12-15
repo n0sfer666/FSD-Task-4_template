@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../dist/style.css">
+    
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../dist/SimpleRangeSlider.js"></script>
     <title>Demo Page</title>
 </head>
 <body>
-    <div id="sliderNT"></div>
+    <style>
+        #sliderNT, #sliderJQ {
+            width: 300px;
+        }    
+    </style>
     <div id="sliderJQ"></div>
-
+    <div id="sliderNT"></div>
     <script>
-        
+        var container = document.getElementById('sliderNT');
+        var slider_NT = new SimpleRangeSlider(container, {})
+        var slider_JQ = $('#sliderJQ').SimpleRangeSlider({});
+            console.log(typeof(SimpleRangeSlider));
     </script>
 </body>
 </html>

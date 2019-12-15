@@ -1,7 +1,6 @@
 /* Variables */
 
 /* Slider */
-$SL_size: 300px;
 $SL_width: 6px;
 $SL_color: #ffffff;
 $SL_border_size: 1px;
@@ -35,13 +34,11 @@ SRS__slider {
     box-sizing: border-box;
 
     &_horizontal {
-        width: $SL_size;
         height: $SL_width;
     }
 
     &_vertical {
         width: $SL_width;
-        height: $SL_size;
     }
 }
 

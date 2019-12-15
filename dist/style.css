@@ -8,13 +8,11 @@ SRS__slider{
 }
 
 SRS__slider_horizontal{
-        width:300px;
         height:6px;
     }
 
 SRS__slider_vertical{
         width:6px;
-        height:300px;
     }
 
 SRS__thumbler{
