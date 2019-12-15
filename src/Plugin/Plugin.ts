@@ -6,14 +6,14 @@ export class SimpleRangeSlider {
         
         let default_Configuration: IConfiguration = {
             orientation: 'horizontal',
-            start: [10],
+            start: 10,
             range: [0, 100],
             step: 1,
             connect: true,
             tooltip: false
         }
 
-        let model_Configuration: IModelConfiguration = {
+        let model_Configuration: IModelData = {
             orientation: this.configuration.orientation === undefined ? default_Configuration.orientation : this.configuration.orientation,
             start: this.configuration.start === undefined ? default_Configuration.start :this. configuration.start,
             range: this.configuration.range === undefined ? default_Configuration.range :this. configuration.range,
