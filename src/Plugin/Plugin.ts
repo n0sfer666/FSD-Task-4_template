@@ -3,7 +3,10 @@ export class SimpleRangeSlider {
     model: Model;
 
     constructor(private container: JQuery, private configuration: IConfiguration) {
+        let slider: HTMLElement = this.container.get(0);
         
+        console.log(slider);
+
         let default_Configuration: IConfiguration = {
             orientation: 'horizontal',
             start: 10,
@@ -13,7 +16,7 @@ export class SimpleRangeSlider {
             tooltip: false
         }
 
-        let model_Configuration: IModelConfiguration = {
+        let сonfiguration: IConfiguration = {
             orientation: this.configuration.orientation === undefined ? default_Configuration.orientation : this.configuration.orientation,
             start: this.configuration.start === undefined ? default_Configuration.start :this. configuration.start,
             range: this.configuration.range === undefined ? default_Configuration.range :this. configuration.range,
@@ -22,9 +25,7 @@ export class SimpleRangeSlider {
             tooltip: this.configuration.tooltip === undefined ? default_Configuration.tooltip : this.configuration.tooltip
         }
 
-        model_Configuration.size_of_Slider_in_px = model_Configuration.orientation === 'horizontal' ? this.container.get(0).offsetWidth : this.container.get(0).offsetHeight;
-
-        this.model = new Model(model_Configuration);
+        this.model = new Model(сonfiguration);
     }
 
 }

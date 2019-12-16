@@ -12,14 +12,17 @@
 </head>
 <body>
     <style>
-        #sliderNT, #sliderJQ {
+        div {
             width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
         }    
     </style>
-    <div id="sliderJQ"></div>
-    <div id="sliderNT"></div>
+    <div id="sliderHor"></div>
+    <div id="sliderVer"></div>
     <script>
-        var slider_JQ = $('#sliderJQ').SimpleRangeSlider({});
+        var slider_horizontal = $('#sliderHor').SimpleRangeSlider({});
+        var slider_vertical = $('#sliderVer').SimpleRangeSlider({orientation: 'vertical'})
     </script>
 </body>
 </html>
