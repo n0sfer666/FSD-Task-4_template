@@ -6,7 +6,7 @@ export class SimpleRangeSlider {
         
         let default_Configuration: IConfiguration = {
             orientation: 'horizontal',
-            start: [10],
+            start: 10,
             range: [0, 100],
             step: 1,
             connect: true,
