@@ -9,9 +9,9 @@ module.exports = {
     },
 
     output: {
-        // library: 'SimpleRangeSlider',
-        // libraryTarget: 'umd',
-        // libraryExport: 'default',
+        library: 'SimpleRangeSlider',
+        libraryTarget: 'umd',
+        libraryExport: 'default',
         filename: '[name].js',
         path: __dirname + '/dist',
     },
