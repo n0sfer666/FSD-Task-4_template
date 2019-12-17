@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Calculator } from './Calculator';
 
 export class Model {
@@ -7,3 +8,5 @@ export class Model {
         this.configuration.range_of_available_values = this.calculator.calculate_range_of_available_values(this.configuration.range, this.configuration.step);
     }
 }
+=======
+>>>>>>> iss1

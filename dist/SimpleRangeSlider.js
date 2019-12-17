@@ -86,6 +86,7 @@
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ "./src/Plugin/Model/Calculator.ts":
 /*!****************************************!*\
   !*** ./src/Plugin/Model/Calculator.ts ***!
@@ -145,6 +146,8 @@ exports.Model = Model;
 
 /***/ }),
 
+=======
+>>>>>>> iss1
 /***/ "./src/Plugin/Plugin.ts":
 /*!******************************!*\
   !*** ./src/Plugin/Plugin.ts ***!
@@ -155,11 +158,10 @@ exports.Model = Model;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Model_1 = __webpack_require__(/*! ./Model/Model */ "./src/Plugin/Model/Model.ts");
 var SimpleRangeSlider = (function () {
-    function SimpleRangeSlider(container, configuration) {
+    function SimpleRangeSlider(container, user_configuration) {
         this.container = container;
-        this.configuration = configuration;
+        this.user_configuration = user_configuration;
         var default_Configuration = {
             orientation: 'horizontal',
             start: 10,
@@ -168,16 +170,17 @@ var SimpleRangeSlider = (function () {
             connect: true,
             tooltip: false
         };
-        var model_Configuration = {
-            orientation: this.configuration.orientation === undefined ? default_Configuration.orientation : this.configuration.orientation,
-            start: this.configuration.start === undefined ? default_Configuration.start : this.configuration.start,
-            range: this.configuration.range === undefined ? default_Configuration.range : this.configuration.range,
-            step: this.configuration.step === undefined ? default_Configuration.step : this.configuration.step,
-            connect: this.configuration.connect === undefined ? default_Configuration.connect : this.configuration.connect,
-            tooltip: this.configuration.tooltip === undefined ? default_Configuration.tooltip : this.configuration.tooltip
+        var configuration = {
+            orientation: this.user_configuration.orientation === undefined ? default_Configuration.orientation : this.user_configuration.orientation,
+            start: this.user_configuration.start === undefined ? default_Configuration.start : this.user_configuration.start,
+            range: this.user_configuration.range === undefined ? default_Configuration.range : this.user_configuration.range,
+            step: this.user_configuration.step === undefined ? default_Configuration.step : this.user_configuration.step,
+            connect: this.user_configuration.connect === undefined ? default_Configuration.connect : this.user_configuration.connect,
+            tooltip: this.user_configuration.tooltip === undefined ? default_Configuration.tooltip : this.user_configuration.tooltip
         };
-        model_Configuration.size_of_Slider_in_px = model_Configuration.orientation === 'horizontal' ? this.container.get(0).offsetWidth : this.container.get(0).offsetHeight;
-        this.model = new Model_1.Model(model_Configuration);
+        console.log('model config: ' + configuration);
+        console.log('user config: ' + this.user_configuration);
+        console.log('container: ' + this.container);
     }
     return SimpleRangeSlider;
 }());
@@ -185,12 +188,16 @@ exports.SimpleRangeSlider = SimpleRangeSlider;
 ;
 (function ($) {
     $.fn.extend({
-        SimpleRangeSlider: function (configuration) {
-            return new SimpleRangeSlider(this, configuration);
+        SimpleRangeSlider: function (user_configuration) {
+            return new SimpleRangeSlider(this, user_configuration);
         }
     });
 }(jQuery));
+<<<<<<< HEAD
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGx1Z2luLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUGx1Z2luLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsdUNBQXNDO0FBQ3RDO0lBR0ksMkJBQW9CLFNBQWlCLEVBQVUsYUFBNkI7UUFBeEQsY0FBUyxHQUFULFNBQVMsQ0FBUTtRQUFVLGtCQUFhLEdBQWIsYUFBYSxDQUFnQjtRQUV4RSxJQUFJLHFCQUFxQixHQUFtQjtZQUN4QyxXQUFXLEVBQUUsWUFBWTtZQUN6QixLQUFLLEVBQUUsRUFBRTtZQUNULEtBQUssRUFBRSxDQUFDLENBQUMsRUFBRSxHQUFHLENBQUM7WUFDZixJQUFJLEVBQUUsQ0FBQztZQUNQLE9BQU8sRUFBRSxJQUFJO1lBQ2IsT0FBTyxFQUFFLEtBQUs7U0FDakIsQ0FBQTtRQUVELElBQUksbUJBQW1CLEdBQWU7WUFDbEMsV0FBVyxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsV0FBVyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDLFdBQVc7WUFDOUgsS0FBSyxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsS0FBSyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQSxJQUFJLENBQUUsYUFBYSxDQUFDLEtBQUs7WUFDdEcsS0FBSyxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsS0FBSyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQSxJQUFJLENBQUUsYUFBYSxDQUFDLEtBQUs7WUFDdEcsSUFBSSxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQSxJQUFJLENBQUUsYUFBYSxDQUFDLElBQUk7WUFDbEcsT0FBTyxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDLE9BQU87WUFDOUcsT0FBTyxFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDLE9BQU87U0FDakgsQ0FBQTtRQUVELG1CQUFtQixDQUFDLG9CQUFvQixHQUFHLG1CQUFtQixDQUFDLFdBQVcsS0FBSyxZQUFZLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDO1FBRXJLLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxhQUFLLENBQUMsbUJBQW1CLENBQUMsQ0FBQztJQUNoRCxDQUFDO0lBRUwsd0JBQUM7QUFBRCxDQUFDLEFBNUJELElBNEJDO0FBNUJZLDhDQUFpQjtBQThCOUIsQ0FBQztBQUFBLENBQUMsVUFBUyxDQUFlO0lBQ3RCLENBQUMsQ0FBQyxFQUFFLENBQUMsTUFBTSxDQUFDO1FBQ1IsaUJBQWlCLEVBQUUsVUFBUyxhQUE2QjtZQUNyRCxPQUFPLElBQUksaUJBQWlCLENBQVMsSUFBSSxFQUFrQixhQUFhLENBQUMsQ0FBQztRQUM5RSxDQUFDO0tBQ0osQ0FBQyxDQUFDO0FBQ1AsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUEifQ==
+=======
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGx1Z2luLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUGx1Z2luLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUE7SUFFSSwyQkFBb0IsU0FBaUIsRUFBVSxrQkFBa0M7UUFBN0QsY0FBUyxHQUFULFNBQVMsQ0FBUTtRQUFVLHVCQUFrQixHQUFsQixrQkFBa0IsQ0FBZ0I7UUFFN0UsSUFBSSxxQkFBcUIsR0FBbUI7WUFDeEMsV0FBVyxFQUFFLFlBQVk7WUFDekIsS0FBSyxFQUFFLEVBQUU7WUFDVCxLQUFLLEVBQUUsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDO1lBQ2YsSUFBSSxFQUFFLENBQUM7WUFDUCxPQUFPLEVBQUUsSUFBSTtZQUNiLE9BQU8sRUFBRSxLQUFLO1NBQ2pCLENBQUE7UUFFRCxJQUFJLGFBQWEsR0FBbUI7WUFDaEMsV0FBVyxFQUFFLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLEtBQUssU0FBUyxDQUFDLENBQUMsQ0FBQyxxQkFBcUIsQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXO1lBQ3hJLEtBQUssRUFBRSxJQUFJLENBQUMsa0JBQWtCLENBQUMsS0FBSyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsa0JBQWtCLENBQUMsS0FBSztZQUNoSCxLQUFLLEVBQUUsSUFBSSxDQUFDLGtCQUFrQixDQUFDLEtBQUssS0FBSyxTQUFTLENBQUMsQ0FBQyxDQUFDLHFCQUFxQixDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLEtBQUs7WUFDaEgsSUFBSSxFQUFFLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJLEtBQUssU0FBUyxDQUFDLENBQUMsQ0FBQyxxQkFBcUIsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJO1lBQzVHLE9BQU8sRUFBRSxJQUFJLENBQUMsa0JBQWtCLENBQUMsT0FBTyxLQUFLLFNBQVMsQ0FBQyxDQUFDLENBQUMscUJBQXFCLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsa0JBQWtCLENBQUMsT0FBTztZQUN4SCxPQUFPLEVBQUUsSUFBSSxDQUFDLGtCQUFrQixDQUFDLE9BQU8sS0FBSyxTQUFTLENBQUMsQ0FBQyxDQUFDLHFCQUFxQixDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLE9BQU87U0FDM0gsQ0FBQTtRQUdELE9BQU8sQ0FBQyxHQUFHLENBQUMsZ0JBQWdCLEdBQUcsYUFBYSxDQUFDLENBQUM7UUFDOUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDLGtCQUFrQixDQUFDLENBQUM7UUFDdkQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO0lBQ2hELENBQUM7SUFFTCx3QkFBQztBQUFELENBQUMsQUE1QkQsSUE0QkM7QUE1QlksOENBQWlCO0FBOEI5QixDQUFDO0FBQUEsQ0FBQyxVQUFTLENBQWU7SUFDdEIsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxNQUFNLENBQUM7UUFDUixpQkFBaUIsRUFBRSxVQUFTLGtCQUFrQztZQUMxRCxPQUFPLElBQUksaUJBQWlCLENBQVMsSUFBSSxFQUFrQixrQkFBa0IsQ0FBQyxDQUFDO1FBQ25GLENBQUM7S0FDSixDQUFDLENBQUM7QUFDUCxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQSJ9
+>>>>>>> iss1
 
 /***/ })
 
