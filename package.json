@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "test": "karma start",
-    "css": "postcss ./src/Style/style.css -o ./dist/style.css --watch",
+    "css": "postcss ./src/Style/style.css -o ./dist/style.css --watch -env development",
     "css:prod": "postcss ./src/Style/style.css -o ./dist/style.min.css --env production",
     "plugin": "webpack --mode development --watch",
     "plugin:prod": "webpack --mode production"
