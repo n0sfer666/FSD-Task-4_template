@@ -1,38 +1,37 @@
-import { Model } from './Model/Model';
 export class SimpleRangeSlider {
-    model: Model;
 
-    constructor(private container: JQuery, private configuration: IConfiguration) {
+    constructor(private container: JQuery, private user_configuration: IConfiguration) {
         
         let default_Configuration: IConfiguration = {
             orientation: 'horizontal',
-            start: [10],
+            start: 10,
             range: [0, 100],
             step: 1,
             connect: true,
             tooltip: false
         }
 
-        let model_Configuration: IModelConfiguration = {
-            orientation: this.configuration.orientation === undefined ? default_Configuration.orientation : this.configuration.orientation,
-            start: this.configuration.start === undefined ? default_Configuration.start :this. configuration.start,
-            range: this.configuration.range === undefined ? default_Configuration.range :this. configuration.range,
-            step: this.configuration.step === undefined ? default_Configuration.step :this. configuration.step,
-            connect: this.configuration.connect === undefined ? default_Configuration.connect : this.configuration.connect,
-            tooltip: this.configuration.tooltip === undefined ? default_Configuration.tooltip : this.configuration.tooltip
+        let configuration: IConfiguration = {
+            orientation: this.user_configuration.orientation === undefined ? default_Configuration.orientation : this.user_configuration.orientation,
+            start: this.user_configuration.start === undefined ? default_Configuration.start : this.user_configuration.start,
+            range: this.user_configuration.range === undefined ? default_Configuration.range : this.user_configuration.range,
+            step: this.user_configuration.step === undefined ? default_Configuration.step : this.user_configuration.step,
+            connect: this.user_configuration.connect === undefined ? default_Configuration.connect : this.user_configuration.connect,
+            tooltip: this.user_configuration.tooltip === undefined ? default_Configuration.tooltip : this.user_configuration.tooltip
         }
 
-        model_Configuration.size_of_Slider_in_px = model_Configuration.orientation === 'horizontal' ? this.container.get(0).offsetWidth : this.container.get(0).offsetHeight;
-
-        this.model = new Model(model_Configuration);
+        // tmp
+        console.log('model config: ' + configuration);
+        console.log('user config: ' + this.user_configuration);
+        console.log('container: ' + this.container);
     }
 
 }
 
 ;(function($: JQueryStatic) {
     $.fn.extend({
-        SimpleRangeSlider: function(configuration: IConfiguration) {
-            return new SimpleRangeSlider(<JQuery>this, <IConfiguration>configuration);
+        SimpleRangeSlider: function(user_configuration: IConfiguration) {
+            return new SimpleRangeSlider(<JQuery>this, <IConfiguration>user_configuration);
         }
     });
 }(jQuery))
